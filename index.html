@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Counterculture‑style Web</title>
+<title>Random Web</title>
 <style>
     body {
         background: #000;
@@ -12,6 +12,16 @@
         font-size: 26px;
         padding: 60px;
         line-height: 1.8;
+    }
+    h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    p.bio {
+        font-size: 20px;
+        color: #ccc;
+        margin-bottom: 30px;
+        max-width: 600px;
     }
     a {
         color: white;
@@ -28,6 +38,13 @@
 </head>
 <body>
 
+<h1>Никита Гаврик</h1>
+<p class="bio">
+Никита Гаврик — молодой исследователь и создатель цифровых проектов. 
+Интересуется технологиями, экспериментальным веб-дизайном и случайными генераторами контента. 
+Любит минимализм и эксперимент с текстовыми формами в интернете.
+</p>
+
 <p id="text"></p>
 
 <script>
@@ -43,8 +60,7 @@ const links = [
     "https://en.wikipedia.org/wiki/Special:Random",
     "https://github.com",
     "https://www.youtube.com",
-    "https://news.ycombinator.com",
-    "https://https://random‑word.com/"
+    "https://news.ycombinator.com"
 ];
 
 function randomWord() {
