@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Web</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font-family: monospace;
+            font-size: 26px;
+            padding: 60px;
+            line-height: 1.8;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 
+<p id="text"></p>
+
+<script>
+const words = [
+    "reality","signal","void","culture","noise",
+    "system","escape","memory","control","dream",
+    "error","future","past","code","human"
+];
+
+function randomWord() {
+    return words[Math.floor(Math.random() * words.length)];
+}
+
+let result = "";
+for (let i = 0; i < 80; i++) {
+    result += `<a href="#">${randomWord()}</a> `;
+}
+
+document.getElementById("text").innerHTML = result;
+</script>
+
+</body>
+</html>
