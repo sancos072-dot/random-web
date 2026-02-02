@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Random Web</title>
-    <style>
-        body {
-            background: black;
-            color: white;
-            font-family: monospace;
-            font-size: 26px;
-            padding: 60px;
-            line-height: 1.8;
-        }
-        a {
-            color: white;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counterculture‑style Web</title>
+<style>
+    body {
+        background: #000;
+        color: #fff;
+        font-family: monospace;
+        font-size: 26px;
+        padding: 60px;
+        line-height: 1.8;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        transition: .2s ease;
+        padding: 0 3px;
+    }
+    a:hover {
+        color: #ccc;
+        text-decoration: underline;
+        transform: scale(1.1);
+    }
+</style>
 </head>
 <body>
 
@@ -28,16 +34,29 @@
 const words = [
     "reality","signal","void","culture","noise",
     "system","escape","memory","control","dream",
-    "error","future","past","code","human"
+    "error","future","past","code","human","chaos",
+    "void","fracture","shift","glitch","domain"
+];
+
+const links = [
+    "https://example.com",
+    "https://en.wikipedia.org/wiki/Special:Random",
+    "https://github.com",
+    "https://www.youtube.com",
+    "https://news.ycombinator.com",
+    "https://https://random‑word.com/"
 ];
 
 function randomWord() {
     return words[Math.floor(Math.random() * words.length)];
 }
+function randomLink() {
+    return links[Math.floor(Math.random() * links.length)];
+}
 
 let result = "";
-for (let i = 0; i < 80; i++) {
-    result += `<a href="#">${randomWord()}</a> `;
+for (let i = 0; i < 120; i++) {
+    result += `<a href="${randomLink()}" target="_blank">${randomWord()}</a> `;
 }
 
 document.getElementById("text").innerHTML = result;
@@ -45,3 +64,4 @@ document.getElementById("text").innerHTML = result;
 
 </body>
 </html>
+
